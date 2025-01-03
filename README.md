@@ -95,6 +95,8 @@ The following diagram illustrates the object structure of the grammar generated 
 
 ```mermaid
 classDiagram
+classDef terminal fill:#eeffff;
+classDef nonterminal fill:#ddeeff;
     Symbol <|-- Terminal
     Symbol <|-- NonTerminal
     Terminal <|-- Token
@@ -173,7 +175,4 @@ classDiagram
     class Grammar:::nonterminal {
         rules: Rule[]
     }
-    classDef terminal fill:#eff, stroke:#79a
-    classDef nonterminal fill:#def, stroke:#79d
-    style Symbol fill:#ece, stroke:#d7d
 ```
