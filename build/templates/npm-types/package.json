@@ -1,0 +1,8 @@
+{
+  "name": "@liquescens/ebnf-types",
+  "version": "0.0.2",
+  "types": "./index.d.ts",
+  "author": "Paweł Stepnowski",
+  "license": "ISC",
+  "description": "Type definitions of ps-ebnf package."
+}

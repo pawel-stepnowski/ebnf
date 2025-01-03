@@ -7,6 +7,26 @@
     --gray-100: #ececec;
     --border-dark: var(--background-dark);
 }
+h1, h2 {
+    text-shadow: 1px 1px 2px #bbb;
+    font-weight: 600;
+}
+h3, h4 {
+    text-shadow: 1px 1px 1px #ccc;
+    font-weight: 400;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.limited-example-output .example-output {
+    max-width: 50vw;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-x: hidden;
+    line-break: anywhere;
+    white-space: break-spaces;
+}
 
 /* @import url('../src/default.css');
 

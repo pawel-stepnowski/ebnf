@@ -4,6 +4,6 @@
     "jsdom": "^25.0.1"
   },
   "dependencies": {
-    "@liquescens/ebnf-types": "file:../dist/types/liquescens-ebnf-types-0.0.2.tgz"
+    "@liquescens/ebnf-types": "file:../dist/npm-types/liquescens-ebnf-types-0.0.2.tgz"
   }
 }

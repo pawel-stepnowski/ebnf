@@ -9,5 +9,5 @@
         "checkJs": true,
         "typeRoots": [ "./src/*.d.ts" ]
     },
-    "exclude": [ "docs", "dist" ]
+    "exclude": [ "docs", "build" ]
 }

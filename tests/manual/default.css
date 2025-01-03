@@ -1,0 +1,42 @@
+@import url(../../src/default.css);
+.grammar-raw {
+    white-space: pre;
+    font-family: monospace;
+}
+.grammar-string {
+    white-space: pre;
+    font-family: monospace;
+}
+.grammar-string-minified {
+    font-family: monospace;
+    line-break: anywhere;
+    white-space: break-spaces;
+}
+.grammar-html {
+    white-space: pre;
+}
+.grammar-render-test {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.grammar-render-test h3 {
+    padding: 0 1em;
+}
+.grammar-render-test > div {
+    flex: 1;
+    border: 1px solid black;
+    margin: 1em;
+    padding: 1em;
+    max-width: 50vw;
+    overflow-wrap: break-word;
+    text-wrap-mode: wrap;
+}
+.grammar-render-test .grammar {
+    border: none;
+    padding: 0;
+}
+body {
+    background-color: #eee;
+    display: flex;
+    gap: 0.5em;
+}

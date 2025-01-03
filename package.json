@@ -9,14 +9,14 @@
   ],
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "all": "node -e \"import { all } from './scripts/index.js'; all();\"",
-    "build:module": "node -e \"import { buildModule } from './scripts/index.js'; buildModule();\"",
-    "build:types": "node -e \"import { buildTypes } from './scripts/index.js'; buildTypes();\"",
+    "all": "node -e \"import { all } from './build/scripts/index.js'; all();\"",
+    "build:module": "node -e \"import { buildModule } from './build/scripts/index.js'; buildModule();\"",
+    "build:types": "node -e \"import { buildTypes } from './build/scripts/index.js'; buildTypes();\"",
     "build:old": "xcopy /e/c/i src dist",
     "types": "npx -p typescript tsc ./src/Parser.js --declaration --allowJs --emitDeclarationOnly --outDir dist/types/",
-    "publish:local-cdn": "node -e \"import { publishToLocalCdn } from './scripts/index.js'; publishToLocalCdn();\"",
-    "pack": "node -e \"import { pack } from './scripts/index.js'; pack();\"",
-    "pack:types": "node -e \"import { packTypes } from './scripts/index.js'; packTypes();\""
+    "publish:local-cdn": "node -e \"import { publishToLocalCdn } from './build/scripts/index.js'; publishToLocalCdn();\"",
+    "pack": "node -e \"import { pack } from './build/scripts/index.js'; pack();\"",
+    "pack:types": "node -e \"import { packTypes } from './build/scripts/index.js'; packTypes();\""
   },
   "devDependencies": {
     "jest": "^29.7.0",

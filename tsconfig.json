@@ -8,5 +8,5 @@
     //     "outDir": "types",
     //     "declarationMap": true,
     // }
-    "exclude": [ "dist" ]
+    "exclude": [ "build" ]
 }

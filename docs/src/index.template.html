@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EBNF Parser Library</title>
     <link rel="stylesheet" href="default.css" />
     <link rel="stylesheet" href="http://localhost/cdn/ps-ebnf/default.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,16 +21,55 @@
     
 </head>
 <body>
+  <h1>EBNF Parser Library</h1>
   <section>
-      <h2>Basic usage</h2>
-      <h3>ECMAScript 6</h3>
-      <pre><!-- @prism(src/index.template.parts.html, basic-usage-importmap) --></pre>
-      <pre><!-- @prism(src/index.template.parts.html, basic-usage-types) --></pre>
-      <pre><!-- @prism(public/js/examples/basic-usage-parse.js) --></pre>
+    <h2>Installation</h2>
+    <section>
+      <h3>Basic Installation</h3>
+      <p>The library can be installed using the following command:</p>
+      <pre><code class="language-shell">npm install @liquescens/ebnf</code></pre>
+      <p>The above command installs the library as an npm package. This version includes the full source code and all necessary dependencies.</p>
+    </section>
+    <section>
+      <h3>Simplified Installation</h3>
+      <p>Alternatively, the library can be installed in a simplified version, containing only type definitions.</p>
+      <pre><code class="language-shell">npm install @liquescens/ebnf-types</code></pre>
+    </section>
+  </section>
+  <section>
+    <h2>Usage Examples</h2>
+    <section>
+      <h3>Using the Default Configuration</h3>
+      <pre><!-- @prism(public/js/examples/basic-usage-parse-default.js) --></pre>
+    </section>
+    <section>
+      <h3>Choosing a Predefined Configuration</h3>
+      <pre><!-- @prism(public/js/examples/basic-usage-parse-choosing.js) --></pre>
+    </section>
+    <section>
+      <h3>Generating DOM and converting to string</h3>
       <div class="example-with-output">
         <pre><!-- @prism(public/js/examples/basic-usage-render.js) --></pre>
         <div><!-- @output(/js/examples/basic-usage-render.js) --></div>
       </div>
+    </section>
+    <section>
+      <h3>Removing whitespaces and comments</h3>
+      <div class="example-with-output">
+        <pre><!-- @prism(public/js/examples/basic-usage-remove-whitespaces.js) --></pre>
+        <div class="limited-example-output"><!-- @output(/js/examples/basic-usage-remove-whitespaces.js) --></div>
+      </div>
+    </section>
+    <section>
+      <h3>Formatting</h3>
+    </section>
+    <section>
+      <h3>Normalization to ISO</h3>
+    </section>
+
+      <h3>ECMAScript 6</h3>
+      <pre><!-- @prism(src/index.template.parts.html, basic-usage-importmap) --></pre>
+      <pre><!-- @prism(src/index.template.parts.html, basic-usage-types) --></pre>
       <h3>Node.js</h3>
   </section>
   <section>

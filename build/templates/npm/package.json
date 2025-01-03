@@ -1,0 +1,9 @@
+{
+  "name": "@liquescens/ebnf",
+  "version": "0.0.2",
+  "type": "module",
+  "main": "./index.js",
+  "author": "Paweł Stepnowski",
+  "license": "ISC",
+  "description": "ISO/IEC 14977 compliant EBNF parser."
+}

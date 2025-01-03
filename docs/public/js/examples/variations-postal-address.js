@@ -4,7 +4,7 @@ class BNFParser extends EBNF.Parser
 {
     static lexerConfiguration()
     {
-        const configuration = EBNF.LexerConfiguration.iso_14977();
+        const configuration = EBNF.LexerConfiguration.iso_14977;
         configuration.patterns.identifier = { pattern: `<[^>]+>` };
         configuration.patterns.identifier_beginning = { pattern: `<` };
         configuration.patterns.defining = { pattern: '::=' };
