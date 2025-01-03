@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="http://localhost/cdn/ps-ebnf/default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
+    <script type="importmap">
+        {
+          "imports": {
+            "@liquescens/ebnf-types": "http://localhost/cdn/ps-ebnf/index.js"
+          }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.js"></script>
+    <script type="module" src="main.js"></script>
+    
+</head>
+<body>
+  <section>
+      <h2>Basic usage</h2>
+      <h3>ECMAScript 6</h3>
+      <pre><!-- @prism(src/index.template.parts.html, basic-usage-importmap) --></pre>
+      <pre><!-- @prism(src/index.template.parts.html, basic-usage-types) --></pre>
+      <pre><!-- @prism(public/js/examples/basic-usage-parse.js) --></pre>
+      <div class="example-with-output">
+        <pre><!-- @prism(public/js/examples/basic-usage-render.js) --></pre>
+        <div><!-- @output(/js/examples/basic-usage-render.js) --></div>
+      </div>
+      <h3>Node.js</h3>
+  </section>
+  <section>
+      <h2>Cookbook</h2>
+      <section>
+        <h3>Formatting</h3>
+        <section>
+          <h4>Removing whitespaces</h4>
+          <div class="code-with-output">
+          </div>
+        </section>
+      </section>
+  </section>
+  <section>
+      <h2>EBNF variations</h2>
+      <div>O generatorze</div>
+      <section>
+        <h3>Pascal-like (Wikipedia)</h3>
+        <!-- <pre> @prism(public/grammars/wikipedia/pascal-like.ebnf.txt) </pre> -->
+        <div class="example-with-output">
+          <pre><!-- @prism(public/js/examples/variations-pascal.js) --></pre>
+          <div><!-- @output(/js/examples/variations-pascal.js) --></div>
+        </div>
+      </section>
+      <section>
+        <h3>Postal address (Wikipedia)</h3>
+        <!-- <pre> @prism(public/grammars/wikipedia/postal-address.bnf.txt) </pre> -->
+        <div class="example-with-output">
+          <pre><!-- @prism(public/js/examples/variations-postal-address.js) --></pre>
+          <div><!-- @output(/js/examples/variations-postal-address.js) --></div>
+        </div>
+      </section>
+  </section>
+</body>
+</html>

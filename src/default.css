@@ -1,0 +1,35 @@
+.grammar {
+    font-family: monospace;
+    border: 1px solid black;
+    padding: 1em;
+    white-space: pre;
+}
+.grammar * {
+    display: inline;
+    gap: 0.5em;
+}
+.grammar .rule {
+    display: inline;
+}
+/* .grammar .rule > .assign {
+    padding: 0 0.5em;
+} */
+.grammar .identifier {
+    color: #0070c1;
+}
+.grammar .terminal-string {
+    background-color: #f5f5f5;
+    border-radius: 1em;
+}
+.grammar .comment {
+    color: #218021;
+    background-color: #f5fff5;
+    font-weight: normal;
+}
+.grammar .declaration {
+    font-weight: 600;
+}
+.grammar .special-sequence {
+    color: #ba2121;
+    background-color: #fffafa;
+}

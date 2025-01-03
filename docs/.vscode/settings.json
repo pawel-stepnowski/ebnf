@@ -1,0 +1,15 @@
+{
+    "emeraldwalk.runonsave":
+    {
+
+        "commands": 
+        [
+            {
+                "match": "\\.template\\.html$",
+                "cmd": "node ./scripts/templating/process.js ${file}",
+                "isAsync": true
+            }
+        ]
+    },
+    "liveServer.settings.root": "/public/"
+}

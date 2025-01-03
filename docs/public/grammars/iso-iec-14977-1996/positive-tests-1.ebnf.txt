@@ -1,0 +1,27 @@
+(* nesting comments should be possible *)
+(* comment (* comment *) comment *)
+
+terminal = "a";
+terminal = 'a';
+terminal = "abcdefghijklmnopqrstuvwxyz|=,'(*)(:)[]{}?;. :+_%@&#$<>\^`~01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+terminator = 'a'.
+special = ? special sequence ?;
+grouped = ( "a" );
+grouped = ( "a" | "b" );
+grouped = ( "a" , "b" );
+grouped = ( "a" , "b" | rule );
+repeated = { "a" };
+repeated = { "a" | "b" };
+repeated = { "a" , "b" };
+repeated = { "a" , "b" | rule };
+optional = [ "a" ];
+optional = [ "a" | "b" ];
+optional = [ "a" , "b" ];
+optional = [ "a" , "b" | rule ];
+factor = 10 * "a";
+factor = 10 * rule;
+factor = 10 * ( "a" | "b" , "c" );
+factor = 10 * ( "a" | "b" , "c" , rule );
+factor = 10 * ? special sequence ?;
+definition = rule, "a", rule, "bbb";
+list = rule | "a" | rule | "bbb";

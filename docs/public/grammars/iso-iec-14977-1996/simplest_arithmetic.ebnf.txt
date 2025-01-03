@@ -1,0 +1,5 @@
+test = 10 * "a";
+digit = "1" | "0" ;
+number = digit - "0", {digit};
+mul = number, "*", number;
+add = mul, "+", mul;
