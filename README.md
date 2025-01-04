@@ -14,7 +14,11 @@ The library can be installed using the following command:
 npm install @liquescens/ebnf
 ```
 
-This installation allows you to use the library with __type checking__ and __IntelliSense__ support. To ensure runtime code support on a web page, you need to configure JavaScript module import mapping.
+This installation allows you to use the library with __type checking__ and __IntelliSense__ support. 
+
+### Runtime Configuration
+
+To ensure runtime code support on a web page, you need to configure JavaScript module import mapping.
 
 You can use the version available via CDN for this purpose:
 
@@ -72,7 +76,7 @@ document.body.appendChild(dom);
 
 ### Other Examples
 
-More examples can be found in the documentation pages.
+More examples can be found in the [documentation pages](https://pawel-stepnowski.github.io/ebnf-docs/).
 
 ## Object Structure
 
