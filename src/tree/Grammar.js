@@ -10,6 +10,7 @@ export class Grammar extends NonTerminal
     {
         super();
         this.rules = rules;
+        this.rules.forEach(rule => rule.parent = this);
     }
 
     get children()

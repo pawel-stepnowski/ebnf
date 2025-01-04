@@ -17,8 +17,11 @@ export class Factor extends NonTerminal
     {
         super();
         this.primary = primary;
+        this.primary.parent = this;
         this.repetition = repetition;
+        this.repetition.parent = this;
         this.operator = operator;
+        this.operator.parent = this;
     }
 
     get children()

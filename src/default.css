@@ -18,7 +18,8 @@
     color: #0070c1;
 }
 .grammar .terminal-string {
-    background-color: #f5f5f5;
+    color: #ba2121;
+    background-color: #fffafa;
     border-radius: 1em;
 }
 .grammar .comment {
@@ -30,6 +31,5 @@
     font-weight: 600;
 }
 .grammar .special-sequence {
-    color: #ba2121;
-    background-color: #fffafa;
+    background-color: #e5e5e5;
 }

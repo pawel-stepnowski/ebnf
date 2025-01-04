@@ -14,7 +14,9 @@ export class DefinitionList extends NonTerminal
     {
         super();
         this.definitions = definitions;
+        this.definitions.forEach(definition => definition.parent = this);
         this.separators = separators;
+        this.separators?.forEach(separator => separator.parent = this);
     }
 
     /**

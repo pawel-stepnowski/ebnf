@@ -28,9 +28,11 @@ function copyFile(source, destination, name)
 
 export function buildNpm()
 {
+    buildNpmTypes();
     fs.rmSync(path_dist_npm, { recursive: true, force: true });
     fs.cpSync(path_src, path_dist_npm, { recursive: true });
     fs.copyFileSync(path.join(path_dist_template_npm, 'package.json'), path.join(path_dist_npm, 'package.json'));
+    fs.copyFileSync(path.join(path_dist_npm_types, 'index.d.ts'), path.join(path_dist_npm, 'index.d.ts'));
 }
 
 export function buildNpmTypes()
@@ -39,18 +41,12 @@ export function buildNpmTypes()
     fs.mkdirSync(path_dist_npm_types);
     execSync('npx -p typescript tsc ./src/index.js --declaration --allowJs --emitDeclarationOnly --outDir dist/npm-types');
     // fs.copyFileSync(path.join(path_src, 'types.d.ts'), path.join(path_dist_types, 'types.d.ts'));
-    fs.copyFileSync(path.join(path_dist_template_npm_types, 'package.json'), path.join(path_dist_npm_types, 'package.json'));
+    // fs.copyFileSync(path.join(path_dist_template_npm_types, 'package.json'), path.join(path_dist_npm_types, 'package.json'));
 }
 
 export function packNpm()
 {
     chdir(path_dist_npm);
-    execSync('npm pack');
-}
-
-export function packNpmTypes()
-{
-    chdir(path_dist_npm_types);
     execSync('npm pack');
 }
 
@@ -63,8 +59,6 @@ export function publishToLocalCdn()
 export function all()
 {
     buildNpm();
-    buildNpmTypes();
     packNpm();
-    packNpmTypes();
     publishToLocalCdn();
 }

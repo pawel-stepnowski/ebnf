@@ -1,3 +1,4 @@
+import * as Variants from "./variants/index.js";
 import * as Tree from "./tree/index.js";
 import * as Utilities from "./utilities/index.js";
 import { Lexer } from "./Lexer.js";
@@ -5,6 +6,7 @@ import { LexerConfiguration } from "./LexerConfiguration.js";
 import { Parser } from "./Parser.js";
 export * as Tree from "./tree/index.js";
 export * as Utilities from "./utilities/index.js";
+export * as Variants from "./variants/index.js";
 export { Lexer }
 export { LexerConfiguration }
 export { Parser }

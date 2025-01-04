@@ -8,11 +8,10 @@ import { Token } from "./tree/Token.js";
 import { Comment } from "./tree/Comment.js";
 import { Integer } from "./tree/Integer.js";
 import { SpecialSequence } from "./tree/SpecialSequence.js";
-
-/** @typedef {import("./index").LexerPosition} LexerPosition */
-/** @typedef {import("./index").LexerTokenName} LexerTokenName */
-/** @typedef {import("./index").LexerTokenTypeMap} LexerTokenTypeMap */
-/** @template {LexerTokenName} T @typedef {import("./index").LexerToken<T>} LexerToken<T> */
+/** @typedef {import("./index.js").LexerPosition} LexerPosition */
+/** @typedef {import("./index.js").LexerTokenName} LexerTokenName */
+/** @typedef {import("./index.js").LexerTokenTypeMap} LexerTokenTypeMap */
+/** @template {LexerTokenName} T @typedef {import("./index.js").LexerToken<T>} LexerToken<T> */
 
 const NewLine = /\n/g;
 
@@ -80,7 +79,7 @@ export class Lexer
     }
 
     /**
-     * @param  {...import("./index").LexerToken<LexerTokenName>} tokens 
+     * @param  {LexerToken<LexerTokenName>[]} tokens 
      */
     undo(...tokens)
     {
@@ -88,7 +87,7 @@ export class Lexer
     }
 
     /**
-     * @returns {import("./index").LexerToken<LexerTokenName> | undefined}
+     * @returns {LexerToken<LexerTokenName> | undefined}
      */
     _read()
     {
@@ -97,18 +96,18 @@ export class Lexer
             || this._readSpecialSequence()
             || this._readObject('integer', match => new Integer(parseInt(match)))
             || this._readObject('identifier', match => new Identifier(match))
-            || this._readObject('term_operator', match => new Token(match))
-            || this._readObject('definition_separator', match => new Token(match))
-            || this._readObject('concatenation_separator', match => new Token(match))
-            || this._readObject('defining', match => new Token(match))
-            || this._readObject('terminator', match => new Token(match))
-            || this._readObject('repetition_symbol', match => new Token(match))
-            || this._readObject('repeated_sequence_start', match => new Token(match))
-            || this._readObject('repeated_sequence_end', match => new Token(match))
-            || this._readObject('grouped_sequence_start', match => new Token(match))
-            || this._readObject('grouped_sequence_end', match => new Token(match))
-            || this._readObject('optional_sequence_start', match => new Token(match))
-            || this._readObject('optional_sequence_end', match => new Token(match))
+            || this._readObject('term_operator', match => new Token(match, 'term_operator'))
+            || this._readObject('definition_separator', match => new Token(match, 'definition_separator'))
+            || this._readObject('concatenation_separator', match => new Token(match, 'concatenation_separator'))
+            || this._readObject('defining', match => new Token(match, 'defining'))
+            || this._readObject('terminator', match => new Token(match, 'terminator'))
+            || this._readObject('repetition_symbol', match => new Token(match, 'repetition_symbol'))
+            || this._readObject('repeated_sequence_start', match => new Token(match, 'repeated_sequence_start'))
+            || this._readObject('repeated_sequence_end', match => new Token(match, 'repeated_sequence_end'))
+            || this._readObject('grouped_sequence_start', match => new Token(match, 'grouped_sequence_start'))
+            || this._readObject('grouped_sequence_end', match => new Token(match, 'grouped_sequence_end'))
+            || this._readObject('optional_sequence_start', match => new Token(match, 'optional_sequence_start'))
+            || this._readObject('optional_sequence_end', match => new Token(match, 'optional_sequence_end'))
             || this._readObject('gap', match => match);
     }
 

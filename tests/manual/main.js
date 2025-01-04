@@ -1,11 +1,7 @@
 import { Lexer } from "../../src/Lexer.js";
 import { LexerConfiguration } from "../../src/LexerConfiguration.js";
 import { Parser } from "../../src/Parser.js";
-import { DefinitionList } from "../../src/tree/DefinitionList.js";
-import { Definition } from "../../src/tree/Definition.js";
-import { Token } from "../../src/tree/Token.js";
 import { dom } from "./utilities/dom/index.js";
-import { DomGenerator } from "../../src/utilities/DomGenerator.js";
 import * as EBNF from "../../src/index.js";
 
 window.addEventListener('load', onWindowLoad);
@@ -25,6 +21,8 @@ function testGrammarParser(parser)
         html: dom('div').attributes({ class: 'grammar-html' }),
         minified_label: dom('h3').textContent('Minified'),
         minified: dom('div').attributes({ class: 'grammar-string-minified' }),
+        formatted_label: dom('h3').textContent('Minified, formatted and converted to html'),
+        formatted: dom('div').attributes({ class: 'grammar-html' }),
     });
     node.raw.textContent(parser.lexer.input);
     try
@@ -32,10 +30,11 @@ function testGrammarParser(parser)
         
         const grammar = parser.parse();
         node.string.textContent(grammar.toString());
-        node.html.element.appendChild(new DomGenerator().generate(grammar));
-        EBNF.Utilities.removeWhitespaces(grammar);
-        // grammar.removeWhitespaces();
+        node.html.element.appendChild(EBNF.toDom(grammar));
+        EBNF.Utilities.removeGap(grammar);
         node.minified.textContent(grammar.toString());
+        EBNF.Utilities.format(grammar);
+        node.formatted.element.appendChild(EBNF.toDom(grammar));
     }
     catch (e)
     {

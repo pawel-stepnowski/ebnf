@@ -17,8 +17,11 @@ export class InfixTerm extends NonTerminal
     {
         super();
         this.first_primary = first_primary;
+        this.first_primary.parent = this;
         this.operator = operator;
+        this.operator.parent = this;
         this.second_primary = second_primary;
+        this.second_primary.parent = this;
     }
 
     get children()

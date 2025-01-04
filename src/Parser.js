@@ -12,12 +12,11 @@ import { Brackets } from "./tree/Brackets.js";
 import { Symbol } from "./tree/Symbol.js";
 import { TerminalString } from "./tree/TerminalString.js";
 import { Integer } from "./tree/Integer.js";
-
-/** @typedef {import("./index").LexerPosition} LexerPosition */
-/** @typedef {import("./index").LexerTokenName} LexerTokenName */
-/** @typedef {import("./index").LexerTokenTypeMap} LexerTokenTypeMap */
-/** @template {LexerTokenName} T @typedef {import("./index").LexerToken<T>} LexerToken */
-/** @template T @template V @typedef {import("./index").KeysMatchingType<T, V>} KeysMatchingType */
+/** @typedef {import("./index.js").LexerPosition} LexerPosition */
+/** @typedef {import("./index.js").LexerTokenName} LexerTokenName */
+/** @typedef {import("./index.js").LexerTokenTypeMap} LexerTokenTypeMap */
+/** @template {LexerTokenName} T @typedef {import("./index.js").LexerToken<T>} LexerToken */
+/** @template T @template V @typedef {import("./index.js").KeysMatchingType<T, V>} KeysMatchingType */
 
 export class Parser
 {
@@ -137,13 +136,12 @@ export class Parser
     }
 
     /**
-     * @template {KeysMatchingType<LexerTokenTypeMap, Token | Integer>} T
+     * @template {KeysMatchingType<LexerTokenTypeMap, Token | Integer | Identifier>} T
      * @param {T} symbol_name 
      * @returns {LexerTokenTypeMap[T]}
      */
     _parseTerminal(symbol_name)
     {
-        // skoro wszystkim terminalom parsuję gap, to czy nie może tego robić lekser?
         const gap = this._parseGap();
         const symbol = this.lexer.popMandatory(symbol_name);
         if (gap) symbol.value.gap.push(...gap.map(item => item.value));

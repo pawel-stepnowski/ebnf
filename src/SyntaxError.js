@@ -1,4 +1,4 @@
-/** @typedef {import("./index").LexerPosition} LexerPosition */
+/** @typedef {import("./index.js").LexerPosition} LexerPosition */
 
 export class SyntaxError extends Error
 {

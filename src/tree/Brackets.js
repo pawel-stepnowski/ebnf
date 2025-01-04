@@ -11,6 +11,8 @@ export class Brackets extends Terminal
     {
         super();
         this.opening_symbol = opening_symbol;
+        this.opening_symbol.parent = this;
         this.closing_symbol = closing_symbol;
+        this.closing_symbol.parent = this;
     }
 }

@@ -19,7 +19,9 @@ export class Definition extends NonTerminal
     {
         super();
         this.factors = factors;
+        this.factors.forEach(factor => factor.parent = this);
         this.separators = separators;
+        this.separators?.forEach(separator => separator.parent = this);
     }
 
     /**

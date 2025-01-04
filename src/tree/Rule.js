@@ -15,9 +15,13 @@ export class Rule extends NonTerminal
     {
         super();
         this.identifier = identifier;
+        this.identifier.parent = this;
         this.definitions = definitions;
+        this.definitions.parent = this;
         this.operator = operator;
+        this.operator.parent = this;
         this.terminator = terminator;
+        this.terminator.parent = this;
     }
 
     get children()

@@ -12,7 +12,9 @@ export class BracketedSequence extends NonTerminal
     {
         super();
         this.definitions = definitions;
+        this.definitions.parent = this;
         this.brackets = brackets;
+        this.brackets.parent = this;
     }
 
     get children()

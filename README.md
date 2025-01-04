@@ -6,7 +6,7 @@ It is provided as an __ECMAScript 6__ module.
 
 ## Installation
 
-### Basic Installation
+### NPM package
 
 The library can be installed using the following command:
 
@@ -14,17 +14,7 @@ The library can be installed using the following command:
 npm install @liquescens/ebnf
 ```
 
-The above command installs the library as an __npm__ package. This version includes the full source code and all necessary dependencies.
-
-### Simplified Installation
-
-Alternatively, the library can be installed in a simplified version, containing only type definitions.
-
-```
-npm install @liquescens/ebnf-types
-```
-
-This installation allows you to use the library with __type checking__ and __IntelliSense__ support. To ensure runtime code support, you need to configure JavaScript module import mapping.
+This installation allows you to use the library with __type checking__ and __IntelliSense__ support. To ensure runtime code support on a web page, you need to configure JavaScript module import mapping.
 
 You can use the version available via CDN for this purpose:
 
@@ -34,7 +24,7 @@ You can use the version available via CDN for this purpose:
     {
         "imports":
         {
-            "@liquescens/ebnf-types": "https://cdn.jsdelivr.net/npm/@liquescens/ebnf/index.js",
+            "@liquescens/ebnf": "https://cdn.jsdelivr.net/npm/@liquescens/ebnf/index.js",
         }
     }
 </script>
@@ -47,7 +37,7 @@ You can use the version available via CDN for this purpose:
 The parser can be run with default settings, compliant with the __ISO/IEC 14977__ standard.
 
 ```javascript
-import * as EBNF from '@liquescens/ebnf-types';
+import * as EBNF from '@liquescens/ebnf';
 const grammar = EBNF.parse('...');
 ```
 
@@ -56,7 +46,7 @@ const grammar = EBNF.parse('...');
 It is possible to use one of several predefined parser configurations.
 
 ```javascript
-import * as EBNF from '@liquescens/ebnf-types';
+import * as EBNF from '@liquescens/ebnf';
 
 const grammar_text = '...';
 const lexer_configuration = EBNF.LexerConfiguration.iso_14977();
