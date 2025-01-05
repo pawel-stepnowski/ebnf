@@ -1,6 +1,6 @@
 # EBNF Parser Library
 
-The library implements a grammar rule parser in EBNF format, compliant with the standard __ISO/IEC 19477:1996__.
+The library implements a grammar rule parser in EBNF format, compliant with the standard __ISO/IEC 19477:1996__ [^1].
 
 It is provided as an __ECMAScript 6__ module.
 
@@ -170,3 +170,5 @@ classDef nonterminal fill:#ddeeff;
         rules: Rule[]
     }
 ```
+
+[^1]: The official whitepaper describes the comment expression as having an internal grammatical structure. In this implementation, the comment structure is not parsed. The comment content is represented as a single literal. 
