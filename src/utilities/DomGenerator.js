@@ -49,7 +49,7 @@ export class DomGenerator
     }
     
     /**
-     * @param {Symbol} symbol
+     * @param {Symbol | Comment} symbol
      * @param {{ textContent?: string }} properties 
      * @returns 
      */

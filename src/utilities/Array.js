@@ -1,21 +1,5 @@
 export class Array
 {
-    // /**
-    //  * @template T
-    //  * @template Separator
-    //  * @param {T[]} array 
-    //  * @param {() => Separator} separator
-    //  * @returns {(T | Separator)[]}
-    //  */
-    // static separateArrayElements(array, separator)
-    // {
-    //     if (array.length < 2) return array;
-    //     const [head, ...tail] = array;
-    //     const items = tail.map(item => [separator(), item]);
-    //     items.unshift([head]);
-    //     return items.flat();
-    // }
-
     /**
      * @template T
      * @param {T[]} items 

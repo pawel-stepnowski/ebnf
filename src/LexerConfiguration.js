@@ -5,8 +5,8 @@ import { Regex } from "./utilities/index.js";
 
 export class LexerConfiguration
 {
-    static iso_14977 = new LexerConfiguration('ISO/IEC 14977:1996', Variants.ISO_14977.createLexerPatterns());
-    static wikipedia_pascal = new LexerConfiguration('Wikipedia Pascal', Variants.Wikipedia_Pascal.createLexerPatterns());
+    static iso_14977 = new LexerConfiguration('ISO/IEC 14977:1996', Variants.ISO_14977.clonePatterns());
+    static wikipedia_pascal = new LexerConfiguration('Wikipedia Pascal', Variants.Wikipedia_Pascal.clonePatterns());
 
     /**
      * @param {string} name 

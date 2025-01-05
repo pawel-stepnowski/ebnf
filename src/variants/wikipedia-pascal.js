@@ -1,10 +1,10 @@
 import { ISO_14977 } from "./index.js";
 import { Regex, RegexString } from "../utilities/index.js";
 
-export function createLexerPatterns()
+export function clonePatterns()
 {
-    const patterns = ISO_14977.createLexerPatterns();
-    patterns.identifier = new Regex(`${RegexString.alternation(ISO_14977.patterns.letter)}[^'"=,|()\\[\\]{}\\-.;]*`);
+    const patterns = ISO_14977.clonePatterns();
+    patterns.identifier = new Regex(`${RegexString.alternation(patterns.letter)}[^'"=,|()\\[\\]{}\\-.;]*`);
     return patterns;
 }
     
